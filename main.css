@@ -97,21 +97,30 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
    header{
-     width: 100vw;
+     width: 1440px;
+     height: 99px;
+     left: 0px;
+     top: 0px;
+     position: absolute;
      background-color: #000000;
      color: #EF8354;
      display: flex;
      justify-content: center;
      align-items: center;
-     padding: 2% 0 2% 0;
+     padding: 1% 0 1% 0;
    }
+
+   
 
    .header_logo{
      display: flex;
      align-items: center;
      flex-direction: row;
+   }
+
+   .HeroSection h1{
+     color: #ffffff
    }
 
    .footer p{
@@ -123,13 +132,18 @@ textarea {
      display: flex;
      justify-content: center;
      align-items: center;
-     position: absolute;
      overflow: hidden;
      bottom: 0;
      margin: 0 auto;
+     position: absolute;
    }
 
-
+   .bg_image{
+     background-image: url("../img/background.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;              /* optional, center the image */
+   }
 
 
 
