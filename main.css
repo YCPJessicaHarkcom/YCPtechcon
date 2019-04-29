@@ -310,13 +310,13 @@ header{
 
 /* modal styles */
 
-.modal_window{
+.modal{
   background-color: #FDF5EA;
   width: 30%;
   height: auto;
 }
 
-.modal_info{
+.modal{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,33 +324,42 @@ header{
   color: #2D3142;
 }
 
-.modal_info img{
+.modal img{
   margin: 5px;
   font-family: 'Roboto condensed', black;
   padding-top: 25px;
-
+  align-items: center;
+  justify-content: center;
 
 }
 
-.modal_info h3{
+.modal h3{
   font-size: 48px;
   margin: 0;
   font-family: 'Roboto condensed', black;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal_info h5{
+.modal h5{
   font-size: 24px;
   margin: 0;
   font-family: 'Roboto condensed', black;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal_info p{
+.modal p{
   font-size: 14px;
   font-family: 'Roboto condensed', black;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 
 
