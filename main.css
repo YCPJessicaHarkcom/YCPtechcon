@@ -101,10 +101,12 @@ textarea {
 
 body{
   background-color: #2D3142;
+  margin: 0;
+  padding: 0;
 }
 
 header{
-  width: 1440px;
+  width: 100%;
   height: 90px;
   left: 0px;
   top: 0px;
@@ -150,13 +152,15 @@ header{
 
 .h1{
   padding: 40px;
+  padding-bottom: 60px;
   background-color: #EF8354;
-  height: 30px;
+  height: 40px;
   width: auto;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
-
+  justify-content: center;
+  font-family: 'roboto condensed', black;
 }
 
 
@@ -168,6 +172,11 @@ header{
    .custom-navbar a{
      color: #EF8354;
      text-decoration: none;
+   }
+
+   .hamburger{
+     display: none;
+
    }
 
    .header_logo{
@@ -201,6 +210,7 @@ header{
      font-size: 13px;
    }
 
+
    .footer p{
         margin-left: 10px;
    }
@@ -228,6 +238,7 @@ header{
      align-items: center;
      flex-wrap: wrap;
      width: 100%;
+     padding-top: 50px;
    }
 
 
@@ -359,6 +370,67 @@ header{
   justify-content: center;
 }
 
+/* accordion */
+
+.accordion{
+  background-color: #FDF5EA;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: 'roboto condensed', black;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover{
+  background-color: #F0DEC2;
+}
+
+.panel{
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+/* tickets */
+
+.tickets_buttons{
+  background-color: #EF8354;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  box-shadow: 2px 2px black;
+  font-family: 'Roboto condensed', black;
+}
+
+.tickets_buttons{
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+
+.tickets_buttons a{
+  margin-right: 20px;
+}
+
+.locate{
+  padding-top: 110px;
+}
+
+
 
 
 
@@ -453,9 +525,30 @@ header{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+.hamburger{
+  display: block;
 }
+
+.custom-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin-top: 150PX;
+}
+
+.custom-navbar a{
+  margin: 4%;
+}
+
+
+}
+
+@media only screen and (max-width: 300px) {
+
+}
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
