@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
   <!-- jQuery Modal -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
@@ -47,11 +48,32 @@
     <!-- end header -->
 <div class="h1">About DevCon</div>
 
+<button class="accordion-faq">What is DevCon?</button>
+<div class="panel-faq">
+  <p>DevCon is Central Pennsylvania's first enterprise level developer conference nestled in the state capitol of Harrisburg right along the Susquehanna river. DevCon came out of the collective ideas of the Central Pennsylvania Technology Council and Harrisburg University as a way to build community in the region and attract top talent in the area.</p>
+</div>
+
+<button class="accordion-faq">Why should I come to DevCon?</button>
+<div class="panel-faq">
+  <p>Why wouldn't you want to come?</p>
+</div>
+
+<button class="accordion-faq">When/Where is DevCon located?</button>
+<div class="panel-faq">
+  <p>From October 4-6, DevCon is located at the Harrisburg Hilton Hotel in Harrisburg, Pennsylvania. The map for directions is located below.</p>
+</div>
+
+<button class="accordion-faq">Will there be food?</button>
+<div class="panel-faq">
+  <p>Of course.</p>
+</div>
+
 <section>
   <div class="locate">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48718.51133542859!2d-76.88483524591915!3d40.255599022201096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8c105348135c1%3A0x7a1d437dd8b3ac8!2sHilton+Harrisburg!5e0!3m2!1sen!2sus!4v1556739780934!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </section>
+
 
     <div class="footer">
       <p>&copy; 2018 PADevCon</p>
@@ -68,6 +90,22 @@
 <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script>
+var acc = document.getElementsByClassName("accordion-faq");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 
 
 </body>
