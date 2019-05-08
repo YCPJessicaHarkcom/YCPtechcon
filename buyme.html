@@ -29,21 +29,24 @@
   <!-- my header -->
   <header>
 
-     <div class="header_logo">
-       <img src="img/devcon-logo.png"></img>
-       <p>Central PA, November 12 - 17</p>
-    </div>
-    <div>
-      <nav class="custom-navbar">
-            <a href="index.html">Home  |</a>
-            <a href="about.html">About  |</a>
-            <a href="Speakers.html">Speakers |</a>
-            <a href="Sponsots.html">Sponsors |</a>
-            <a href="schedule.html">Schedule |</a>
-            <a href="Tickets.html">Buy Tickets</a>
-        </nav>
-    </div>
-  </header>
+    <div class="header_logo">
+      <a href="index.html"><img src="img/devcon-logo.png"></img></a>
+      <p>Central PA, November 12 - 17</p>
+   </div>
+   <div>
+     <div class="hamburger">
+       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+     </div>
+     <nav class="custom-navbar">
+           <a href="index.html">Home  | </a>
+           <a href="about.html">About  | </a>
+           <a href="Speakers.html">Speakers |</a>
+           <a href="Sponsots.html">Sponsors |</a>
+           <a href="schedule.html">Schedule |</a>
+           <a href="Tickets.html">Buy Tickets</a>
+       </nav>
+   </div>
+ </header>
     <!-- end header -->
 <div class="h1">Checkout</div>
 
@@ -130,6 +133,17 @@
 
     <!-- BEGIN modals -->
 
+    
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Speakers.html">Speakers</a>
+      <a href="Sponsots.html">Sponsors</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="Tickets.html">Buy Tickets</a>
+    </div>
+
 
 
 
@@ -140,6 +154,17 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
 
 </body>
 

@@ -14,6 +14,8 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    position: relative;
+    min-height: 100%;
 }
 
 /*
@@ -106,7 +108,8 @@ textarea {
 body{
   background-color: #2D3142;
   margin: 0;
-  padding: 0;
+  margin: 0 0 100px;
+  /* bottom = footer height */
 }
 
 header{
@@ -202,9 +205,9 @@ header{
 
 
    .footer{
-     position: relative;
-     left: 0;
-     bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
      width: 100%;
      background-color: #000000;
      color: #EF8354;
@@ -231,6 +234,11 @@ header{
 
    .footer p{
         margin-left: 10px;
+        color: #fff;
+   }
+
+   .footer a{
+     color: #fff;
    }
 
    .bg_image{
@@ -726,23 +734,61 @@ span.price {
 
 @media only screen and (max-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+
+    body{
+      overflow-x: hidden;
+    }
+
+.custom-navbar{
+  display: none;
+}
+
 .hamburger{
   display: block;
 }
 
-.custom-navbar {
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    margin-top: 150px;
-    text-align: right;
-    background-color: #FFFFFF;
-    border-radius: 5px;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.custom-navbar a{
-  margin: 4%;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #EF8354;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Roboto condensed', black;
+}
 
+.sidenav a:hover {
+  color: rgb(112, 63, 42);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 .row {
